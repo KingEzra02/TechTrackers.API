@@ -306,12 +306,6 @@ Entities: `User`, `Role`, `UserRole`, `UserOtp`, `Department`, `Category`, `SLA`
 | SQL Server | LocalDB **or** a full instance | Connection string targets `(localdb)\MSSQLLocalDB` by default |
 | [EF Core tools](https://learn.microsoft.com/ef/core/cli/dotnet) | `dotnet tool install --global dotnet-ef` | For applying migrations |
 
-<a id="known-environment-gaps"></a>
-> ### ⚠️ Known environment gaps (documentation machine)
-> These were observed while documenting the project and may apply to a fresh checkout:
-> - **.NET SDK not installed** — `dotnet` was unavailable, so the API could not be built or run and migrations could not be applied. Install the .NET 8 SDK first.
-> - **LocalDB not present** — the default connection string uses `(localdb)\MSSQLLocalDB`, but only full SQL Server instances (`MSSQLSERVER`, `SQLEXPRESS`) were found. Either install SQL Server Express LocalDB, or edit the connection string (see [Configuration](#-configuration)) to point at an available instance, e.g. `Server=localhost;` or `Server=.\SQLEXPRESS;`.
-> - **Frontend/back-end URL mismatch** — the frontend calls `https://localhost:44328/api/` (the IIS Express SSL port), while `dotnet run` (Kestrel) serves on `https://localhost:7262` / `http://localhost:5276`. Run the API under **IIS Express**, or update `src/APIs/API.js` to match your chosen Kestrel URL. CORS currently allows only `http://localhost:3000–3002`.
 
 ### 1. Clone
 
