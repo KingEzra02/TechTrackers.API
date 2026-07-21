@@ -93,10 +93,6 @@ The project is split into two independently runnable apps:
 
 ---
 
-## 📸 Screenshots
-
-> **Note on these images.** The React frontend was **verified running locally** during documentation (it compiled successfully and served all pages with HTTP 200 — the public pages rendered fully). However, live screenshot capture could not be completed in the documentation environment, and the **backend could not be started here at all** because the **.NET SDK is not installed** on the machine (see [Getting Started → Known environment gaps](#known-environment-gaps)). The images below are therefore **clearly-labelled placeholders**. Blue badges mark pages that render without the API; amber badges mark pages that require the backend to be running. Replace each file in `docs/screenshots/` with a real capture once both tiers are up.
-
 ### Public pages (render without the backend)
 
 | Landing | Sign In |
